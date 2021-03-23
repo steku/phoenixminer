@@ -4,6 +4,7 @@
 [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 There is probably a package available for your OS.
 
+## Summary
 This repo holds a dockerfile and script to run the container image.
 
 The container uses nvidia drivers and runs as a non-privileged user so you can feel safer running the miner.
