@@ -15,10 +15,10 @@ RUN ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime; \
 
 RUN useradd miner -u 6666 -d /home/miner -m
 
-RUN wget "https://github.com/PhoenixMinerDevTeam/PhoenixMiner/releases/download/5.5c/PhoenixMiner_5.5c_Linux.tar.gz"
-RUN tar xvzf PhoenixMiner_5.5c_Linux.tar.gz -C /home/miner
-RUN mv "/home/miner/PhoenixMiner_5.5c_Linux" "/home/miner/phoenixminer"
-RUN sudo chmod +x /home/miner/phoenixminer/PhoenixMiner
+RUN wget https://github.com/PhoenixMinerDevTeam/PhoenixMiner/releases/download/5.5c/PhoenixMiner_5.5c_Linux.tar.gz; \
+    tar xvzf PhoenixMiner_5.5c_Linux.tar.gz -C /home/miner; \
+    mv /home/miner/PhoenixMiner_5.5c_Linux /home/miner/phoenixminer; \
+    chmod +x /home/miner/phoenixminer/PhoenixMiner
 
 # Define working directory.
 WORKDIR /home/miner/
