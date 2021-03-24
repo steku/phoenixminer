@@ -6,10 +6,10 @@ nvidia-settings -a [fan:0]/GPUTargetFanSpeed=35
 sudo nvidia-smi -pm 1
 sudo nvidia-smi -pl 80
 
-docker run --gpus all -it --rm --name phoenixminer steku81/phoenixminer:5.5c 
+docker run --gpus all -it --rm --name phoenixminer steku81/phoenixminer:5.5c-nvidia
 
 #docker run --gpus all -it --rm --name phoenixminer \
-#	phoenixminer:5.5c \
+#	phoenixminer:5.5c-nvidia \
 #	/home/miner/phoenixminer/PhoenixMiner \
 #	-pool stratum1+tcp://us-east.ezil.me:4444 \
 #       -pool2 stratum1+tcp://us-west.ezil.me:4444 \
